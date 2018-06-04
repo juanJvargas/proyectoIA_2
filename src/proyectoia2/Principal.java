@@ -72,12 +72,12 @@ public class Principal implements ActionListener {
         btEjecutar = new JButton("Ejecutar");
         btJugar = new JButton("Iniciar Juego");
         btJugada = new JButton("Realizar jugada");
-        ldimension = new JLabel("Dimension del tablero (solo un nuemro entero)");
+        ldimension = new JLabel("Dimension del tablero (solo un numero entero)");
         tdiemnsion = new JTextField(5);
-        lmanzanas = new JLabel("Cantidad de Manzanas en el tablero (solo nuemros entero)");
+        lmanzanas = new JLabel("Cantidad de Manzanas en el tablero (solo numeros enteros)");
         tmanzanas = new JTextField(5);
         lposicion = new JLabel("Posicion de la jugada (x,y)");
-        lconsejo = new JLabel("Recuerda que X son las filas y Y las filas");
+        lconsejo = new JLabel("Recuerda que X son las filas y Y las columnas");
         lPuntaje = new JLabel("Maquina:   "+manzanasB+"     \nHumano:   "+manzanasN);
         tposicionN = new JTextField(10);
         pOpciones.add(ldimension, "wrap");
@@ -91,7 +91,7 @@ public class Principal implements ActionListener {
         pOpciones.add(lconsejo, "");
         pOpciones.add(btJugada, "wrap");
         pOpciones.add(lPuntaje,"");
-        pOpciones.setBorder(BorderFactory.createTitledBorder("opciones"));
+        pOpciones.setBorder(BorderFactory.createTitledBorder("Opciones"));
         btEjecutar.addActionListener(this);
         btJugar.addActionListener(this);
         btJugar.setVisible(false);
@@ -167,7 +167,7 @@ public class Principal implements ActionListener {
                 lposicion.setVisible(true);
                 tposicionN.setVisible(true);
             } else {
-                JOptionPane.showMessageDialog(null, "inciel el juego con al menos una manzana");
+                JOptionPane.showMessageDialog(null, "Inicie el juego con al menos una manzana");
             }
         } else if (e.getSource() == btJugada) {
             if (turno % 2 != 0) {
@@ -224,7 +224,7 @@ public class Principal implements ActionListener {
                         terminar();
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "selecciona un movimietno valido");
+                    JOptionPane.showMessageDialog(null, "selecciona un movimiento valido");
                 }
 
             }
